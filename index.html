@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AISYAHAQILAH'S WEBSITE</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+<body>
+	<div class="background">
+	<br/><br/>
+	<align="right">
+		<audio controls autoplay>
+		<source src="audio/Photograph.mp3" type="audio/mpeg">
+		</audio>
+	</align>
+	<div class="nav">
+		<a class="a active" href="#">HOME</a>
+		<a class="b" href="#">ABOUT ME</a>
+		<a class="c" href="#">GALLERY</a>
+		<a class="d" href="#">CONTACT US</a>
+	</div>
+	<div class="content">
+
+		<div class="home">
+			<h1>I am Aisyah Nur Aqilah Mohd Nasir</h1>
+			<h3>Diploma Student of Information Management</h3>
+		</div>
+		<div class="aboutus">
+			<p><b>Hello Friends,</b><br>
+			Welcome to my <b>personal websites</b><br>
+			This websites is to know all about myself such as full name, date and places of birth, my favourite food and drink, my gallery 						and much more...<br>
+			So please enjoy it and if have any query or suggestion so please <b>contact us</b>.</p>
+			<p>My name is <b>Aisyah Nur Aqilah Binti Mohd Nasir.</b><br>
+			I am <b>21 years old</b> and was born on <b>24 April 1999</b> at <b>Klinik Bersalin Amalina , Seremban.</b><br>
+			I have seven siblings and I was a <b>third daughter</b>.<br>
+			My primary school is <b>Sekolah Kebangsaan Dato Shah Bandar Rembau</b> and then the secondary school is <b>Sekolah Menengah Agama Haji Mohd 			Yatim.</b>
+			Now, I am study at <b>Campus UiTM Branch Rembau in education level of Diploma in Information Management</b>. <br>
+			<p>My Favourite Foods and Drinks are : 
+			<b><li>Chicken Rice</li></b><b><li>Iced Coffee Chocolate</li></b><b><li>Hamburger Chicken Cheese</li></b></p>
+			</p><br>
+		</div>
+		<div class="gallery">
+			<div class="image">
+				<img src="images/1.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/2.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/3.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/4.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/5.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/6.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/7.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/8.jpg"/>
+			</div>
+			<div class="image">
+				<img src="images/9.jpg"/>
+			</div>
+		</div>
+		
+		<div class="contactus">
+			<div class="contactform">
+				<form action="index.html" method="post">
+					<input type="text" name="" class="inputtext" value="First Name">
+					<input type="text" name="" class="inputtext" value="Last Name">
+					<input type="text" name="" class="inputtext" value="Your Email">
+					<textarea cols="4" rows="6"class="inputmessage">Your Messages...</textarea>
+					<input type="button" name="" class="submitbutton" value="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('a').click(function(){
+				//alert("i am click");
+				var selected = $(this);
+				$('a').removeClass('active');
+				$(selected).addClass('active');
+			});
+			
+			var $a = $('.a'),
+			$b = $('.b'),
+			$c = $('.c'),
+			$d = $('.d'),
+			$home = $('.home'),
+			$aboutus = $('.aboutus'),
+			$gallery = $('.gallery'),
+			$contactus = $('.contactus');
+			
+			$a.click(function(){
+				$home.fadeIn();
+				$aboutus.fadeOut();
+				$gallery.fadeOut();
+				$contactus.fadeOut();
+			});
+			$b.click(function(){
+				$aboutus.fadeIn();
+				$home.fadeOut();
+				$gallery.fadeOut();
+				$contactus.fadeOut();
+			});
+			$c.click(function(){
+				$gallery.fadeIn();
+				$home.fadeOut();
+				$aboutus.fadeOut();
+				$contactus.fadeOut();
+			});
+			$d.click(function(){
+				$contactus.fadeIn();
+				$home.fadeOut();
+				$aboutus.fadeOut();
+				$gallery.fadeOut();
+			});
+		});
+	</script>
+</body>
+</html>
